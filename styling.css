@@ -1,0 +1,499 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    background: rgba(148, 146, 146, 0.521);
+    color: rgb(0, 0, 0);
+    padding: 10px 0px;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin-top: -10px;
+    padding: 0 10px
+}
+
+.navbar-logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(220, 20, 60, 0.74);
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+
+.slider {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 50%;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.slide-content {
+    max-width: 900px;
+    margin: 0px auto;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 3s forwards; /* Apply animation */
+}
+
+.slide-content h1, p {
+    margin: 0;
+}
+
+/* Animation Styles */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: crimson;
+}
+
+.slide-content p {
+    font-size: 30px;
+    line-height: 1.6;
+    letter-spacing: 5px;
+}
+.slide-content button{
+    padding: 10px 30px;
+    background-color: crimson;
+    color: black;
+    box-shadow: 5px 5px 5px black;
+    font-size: 24px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 400;
+}
+.slide-content .btn{
+    background: transparent;
+    color: crimson;
+    font-size: 24px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 5px 5px black;
+    font-weight: 400;
+    padding: 10px 30px;
+}
+.slide-content button:hover{
+    color: crimson;
+    background: transparent;
+}
+.slide-content .btn:hover{
+    background-color: crimson;
+    color: black;
+}
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('pic/business-proposal-bidding-hands-holding-money.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 20px;
+    min-height: 100vh;
+    background-color: #ddddddc7; 
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.hero-left {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 8px;
+}
+.hero-section h2{
+    font-size: 70px;
+    width: 50%;
+    color: black;
+    text-decoration:underline crimson;
+}
+.hero-left form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-left label {
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.hero-left input[type="text"],
+.hero-left input[type="number"],
+.hero-left textarea,
+.hero-left select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.hero-left input[type="submit"] {
+    background-color: crimson;
+    color: #000000;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-left input[type="submit"]:hover {
+    background-color: darkred;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.projects-section {
+    padding: 40px;
+}
+
+.projects-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: crimson;
+    font-size: 50px;
+    text-transform: uppercase;
+
+}
+
+.projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.822);
+    text-align: center;
+}
+
+.project h3 {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.project p {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    position: relative;
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 20px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.progress-bar-fill {
+    background-color: crimson;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.progress-bar span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #000000;
+}
+a.donate-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: crimson;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.donate-button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+a.donate-button:active {
+    background-color: darkred;
+    transform: scale(0.95);
+}
+.donation-form {
+    background: url('pic/img.png') no-repeat center center/cover;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1000px;
+    height: 80%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: crimson;
+}
+
+.donation-form label {
+    display: block;
+    margin: 40px 40px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.donation-form input[type="number"],
+.donation-form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+
+.donation-form button {
+    background-color: crimson;
+    color: #fff;
+    width: 98%;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.donation-form button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.donation-form button:active {
+    background-color: darkred;
+    transform: scale(0.95);
+}
+
+/* Our Goals Section Styles */
+.our-goals {
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), 
+                url('pic/img3.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff; /* Make text white to contrast with the dark background */
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.our-goals h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: crimson;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.our-goals p{
+    text-align: center;
+    margin: 20px;
+    color: #fff;
+    font-size: 30px;
+}
+.our-goals button{
+    background: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 5px 5px 5px rgb(255, 255, 255);
+    font-weight: 400;
+    padding: 10px 30px;
+}
+.our-goals button:hover{
+    background-color: crimson;
+    color: #000000;
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color:crimson ;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-info,
+.footer-social,
+.footer-copyright {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-info h3,
+.footer-social h3 {
+    margin-top: 0;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: crimson;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #444;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-icon.facebook:hover {
+    background-color: crimson;
+    border: 1px solid black;
+    color: #000000;
+}
+
+.social-icon.twitter:hover {
+    background-color: crimson;
+    border: 1px solid black;
+    color: #000000;
+}
+
+.social-icon.linkedin:hover {
+    background-color: crimson;
+    border: 1px solid black;
+    color: #000000;
+}
+
+.social-icon.instagram:hover {
+    background-color: crimson;
+    border: 1px solid black;
+    color: #000000;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
